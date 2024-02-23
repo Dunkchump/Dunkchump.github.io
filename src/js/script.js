@@ -48,6 +48,35 @@ $(document).ready(function(){
   });
 
 
+  function valideForm(form){
+    $(form).validate ({
+      rules: {
+        name: "require",
+        phone: "require",
+        email: {
+          require: true,
+          email: true
+        }
+      },
+      messages: {
+        name: "Уходите, мне не интересно ваше имя",
+        phone: "Как же мне поебать на твои цифры",
+        email: {
+          required: "Уебывай",
+          email: "Ну что, даунич name@domain.com"
+        }
+      }
+    });
+    
+  }
+  valideForm('#consultation-form');
+  valideForm('#consultation form');
+  valideForm('#order form');
+
+  $('input[name=phone]').mask("+38 (999) 999-9999");
+
+
+
   });
 
 

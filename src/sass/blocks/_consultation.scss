@@ -10,4 +10,14 @@
         text-align: left;
         padding-top: 70px;
     }
+    .error {
+        border: 1px solid red;
+
+    }
+    label.error {
+        color: #fff; 
+        border: none;
+        text-align: center;
+        padding-bottom: 15px;
+    }
 }
